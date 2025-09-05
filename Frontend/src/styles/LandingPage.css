@@ -1,27 +1,80 @@
+/* Prevent scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Page layout */
 .landing-container {
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
   font-family: Arial, sans-serif;
 }
 
+/* Title should always be centered */
 .title {
-  font-size: 1.8rem;
+  font-size: 28px;
   font-weight: bold;
   color: purple;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
 }
 
+/* Main wrapper: camera (left) + buttons (right) */
+.main-content {
+  display: flex;
+  align-items: center;  /* vertical alignment */
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Button column (stacked vertically) */
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #eee;
+}
+
+.start-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.stop-btn {
+  background: #f44336;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Camera box */
 .camera-box {
-  width: 90%;
+  width: 700px;
   height: 400px;
-  margin: auto;
-  border: 2px dashed #ccc;
+  border: 2px solid #ccc;
   border-radius: 12px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fafafa;
-  overflow: hidden;
+  background: #f9f9f9;
 }
 
 .camera-feed {
@@ -31,34 +84,6 @@
 }
 
 .placeholder {
-  color: gray;
-  font-size: 1.1rem;
-}
-
-.button-row {
-  margin-top: 1rem;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.action-btn {
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background: white;
-  cursor: pointer;
-}
-
-.start-btn {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #8e2de2, #4a00e0);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+  font-size: 16px;
+  color: #777;
 }
